@@ -1,0 +1,11 @@
+@import '../../Style/variable';
+
+.form {
+    display: flex;
+    flex-direction: column;
+    background: $bg-primary-dark;
+    border-radius: 10px;
+    box-shadow: 2px 4px 4px #0000009F;
+    padding: 18px 16px;
+    width: 100%;
+}

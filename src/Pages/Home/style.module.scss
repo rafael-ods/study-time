@@ -1,0 +1,17 @@
+@import '../../Style/variable';
+
+.container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 58px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 20px 10px;
+        align-items: center;
+    }
+}

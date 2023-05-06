@@ -1,0 +1,33 @@
+@import '../../Style/variable';
+
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    
+    &__label {
+        cursor: pointer;
+        margin-bottom: 8px;
+        font-size: 1.25rem;
+    }
+
+    &__input {
+        color: $colors-secundary;
+        width: 100%;
+        padding: 16px;
+        border: 2px solid rgb(53, 53, 70);
+        border-radius: 5px;
+        outline: none;
+        background-color: transparent;
+        box-shadow: 0px 2px 4px #2D2B2B9F inset;
+
+        &::placeholder {
+            color: $colors-secundary;
+        }
+
+        &:focus {
+            border: 2px solid $color-primary;
+        }
+    }
+}

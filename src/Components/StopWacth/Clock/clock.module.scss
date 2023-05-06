@@ -1,0 +1,9 @@
+@import '../../../Style/variable';
+
+.number {
+  text-align: center;
+  background-color: $bg-primary;
+  box-shadow: 2px 2px 4px #2B2B2B inset;
+  padding: 8px 12px;
+  border-radius: 10px;
+}

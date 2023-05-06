@@ -1,0 +1,20 @@
+@import '../../Style/variable';
+
+.button {
+    color: $color-primary;
+    cursor: pointer;
+    border: 2px solid $color-primary;
+    border-radius: 8px;
+    background-color: transparent;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 15px;
+    padding: 16px;
+    transform: translate(0, -3px);
+    transition: 0.2s;
+    transition-timing-function: linear;
+}
+
+.button:active {
+    transform: translate(0, 0);
+}
