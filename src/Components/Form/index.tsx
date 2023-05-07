@@ -11,7 +11,7 @@ interface FormProps {
 
 const Form = ({ addTask }: FormProps) => {
   const [task, setTask] = useState("");
-  const [time, setTime] = useState("00:00:00");
+  const [time, setTime] = useState("00:00");
   
 
   const handlePreventDefault = (e: React.FormEvent<HTMLFormElement>) => {
