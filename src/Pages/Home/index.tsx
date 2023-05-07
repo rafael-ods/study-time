@@ -22,6 +22,10 @@ const Home = () => {
     })))
   }
 
+  const deleteTask = (id : ICardTask) => {
+    setTask(task.filter(task => task.id !== id.id))
+  }
+
   const finishedTask = () => {
     if(selected) {
       setSelected(undefined)
@@ -51,6 +55,7 @@ const Home = () => {
         <CardTask 
           cards={task}
           selectedTask={selectedTask}
+          deleteTask={deleteTask}
         />
       </Aside>
     </main>
