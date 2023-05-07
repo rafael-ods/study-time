@@ -45,7 +45,7 @@ const Form = ({ addTask }: FormProps) => {
         id="Tempo"
         label="Tempo"
         step="1"
-        min="00:30:00"
+        min="00:00:00"
         max="01:30:00"
         value={time}
         placeholder="O que você quer estudar"

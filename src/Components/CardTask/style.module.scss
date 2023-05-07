@@ -26,7 +26,9 @@
         margin-bottom: 1rem;
         position: relative;
         cursor: pointer;
-
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 
     
@@ -47,4 +49,19 @@
     transform: translate(0, -3px);
     transition: 0.2s;
     transition-timing-function: linear;
+}
+
+.backgroundComplete {
+    background-color: $color-primary-dark;
+}
+
+
+.icon {
+    display: none;
+}
+
+.showIcon {
+    color: $bg-primary-dark;
+    font-size: 1.8rem;
+    display: block;
 }

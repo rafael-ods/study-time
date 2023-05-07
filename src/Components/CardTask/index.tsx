@@ -1,5 +1,6 @@
 import { ICardTask } from "../../Shared/ICardTask";
 import style from "./style.module.scss";
+import { BsJournalCheck } from "react-icons/bs";
 
 interface CardProps {
   cards: ICardTask[];
@@ -13,10 +14,12 @@ const CardTask = ({ cards, selectedTask }: CardProps) => {
       {cards.map((card) => {
         return (
           <li
-            className={`${style.card__item} ${card.selected ? style.itemActive : ''}`}
+            className={`${style.card__item} ${
+              card.selected ? style.itemActive : ""
+            } ${card.completed ? style.backgroundComplete : ""}`}
             key={card.id}
             onClick={() => {
-              selectedTask({
+                !card.completed && selectedTask({
                 id: card.id,
                 task: card.task,
                 time: card.time,
@@ -25,8 +28,14 @@ const CardTask = ({ cards, selectedTask }: CardProps) => {
               });
             }}
           >
-            <h3 className={style.card__title}>{card.task}</h3>
-            <span className={style.card__span}>{card.time}</span>
+            <div>
+              <h3 className={style.card__title}>{card.task}</h3>
+              <span className={style.card__span}>{card.time}</span>
+            </div>
+            <BsJournalCheck
+              aria-label="Tarefa Completada"
+              className={`${card.completed ? style.showIcon : style.icon}`}
+            />
           </li>
         );
       })}

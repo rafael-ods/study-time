@@ -22,12 +22,30 @@ const Home = () => {
     })))
   }
 
+  const finishedTask = () => {
+    if(selected) {
+      setSelected(undefined)
+      setTask(previousTask => previousTask.map(task => {
+        if(task.id === selected.id) {
+          return {
+            ...task,
+            selected: false,
+            completed: true,
+          }
+        }
+        return task
+      }))
+    }
+  }
 
   return (
     <main className={style.container}>
       <div>
         <Form addTask={(tasks) => newTasks(tasks)}/>
-        <StopWacth selected={selected}/>
+        <StopWacth
+          selected={selected}
+          finishedTask={finishedTask}
+        />
       </div>
       <Aside title='Estudos do dia'>
         <CardTask 
