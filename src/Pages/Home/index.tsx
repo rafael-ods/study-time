@@ -8,14 +8,14 @@ import { ICardTask } from '../../Shared/ICardTask';
 
 const Home = () => {
   const [task, setTask] = useState<ICardTask[]>([]) 
-  const [selected, setSelected] = useState<ICardTask[]>() 
+  const [selected, setSelected] = useState<ICardTask>() 
 
   const newTasks = (tasks: ICardTask) => {
     setTask([...task, tasks])
   }
 
   const selectedTask = (taskSelected: ICardTask) => {
-    setSelected([taskSelected])
+    setSelected(taskSelected)
     setTask(previousTask => previousTask.map(task => ({
       ...task,
       selected: task.id === taskSelected.id ? true : false
