@@ -5,7 +5,7 @@ import { RiDeleteBin2Line } from "react-icons/ri";
 interface CardProps {
   cards: ICardTask[];
   selectedTask: (taskSelected: ICardTask) => void;
-  deleteTask: (id: ICardTask) => void
+  deleteTask: (id: ICardTask) => void;
 }
 
 const CardTask = ({ cards, selectedTask, deleteTask }: CardProps) => {
@@ -39,7 +39,12 @@ const CardTask = ({ cards, selectedTask, deleteTask }: CardProps) => {
                 aria-label="Tarefa Completada"
                 className={`${card.completed ? style.showIcon : style.icon}`}
               />
-              <RiDeleteBin2Line color="red" size={28} onClick={() => deleteTask(card)}/>
+              <RiDeleteBin2Line
+                aria-label="Icone de deletar card"
+                color="red"
+                size={28}
+                onClick={() => deleteTask(card)}
+              />
             </div>
           </li>
         );
